@@ -12,6 +12,7 @@ export default async function HomePage() {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })
   const { user } = await payload.auth({ headers })
+  // DB から media コレクションのデータを取得する(分割代入: docsプロパティの値を mediaList に代入)
   const { docs: mediaList } = await payload.find({
     collection: 'media',
     overrideAccess: false,
