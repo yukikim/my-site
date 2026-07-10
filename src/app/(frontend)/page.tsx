@@ -12,6 +12,12 @@ export default async function HomePage() {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })
   const { user } = await payload.auth({ headers })
+  const { docs: mediaList } = await payload.find({
+    collection: 'media',
+    overrideAccess: false,
+    sort: '-createdAt',
+  })
+  console.log('mediaList', mediaList)
 
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
@@ -46,6 +52,17 @@ export default async function HomePage() {
           >
             Documentation
           </a>
+        </div>
+        <div className="mediaList">
+          {mediaList.map(
+            (media) =>
+              media.url && (
+                <div key={media.id} className="mediaItem">
+                  <Image alt={media.alt} height={100} src={media.url} width={100} />
+                  <p>{media.alt}</p>
+                </div>
+              ),
+          )}
         </div>
       </div>
       <div className="footer">
