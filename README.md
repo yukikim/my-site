@@ -1,5 +1,7 @@
 # Payload Blank Template
 
+**このテンプレートを使ってマイサイト(プロフィールサイト)を構築してみる**
+
 This template comes configured with the bare minimum to get started on anything you need. PostgreSQL is used as the database.
 
 ## Quick start
