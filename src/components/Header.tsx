@@ -27,16 +27,16 @@ export default function Header() {
   }
 
   return (
-    <header className="border-b border-gray-200 bg-white">
+    <header className="border-b border-gray-200 bg-slate-700">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* ロゴ */}
           <a
             href="/"
-            className="text-xl font-bold tracking-tight text-gray-900"
+            className="text-xl font-bold tracking-tight text-gray-400"
             onClick={closeMenu}
           >
-            Sample Site
+            My Profile
           </a>
 
           {/* PC向けメニュー */}
@@ -45,7 +45,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-blue-600"
+                className="text-sm font-medium text-gray-300 transition-colors hover:text-blue-300"
               >
                 {item.label}
               </a>

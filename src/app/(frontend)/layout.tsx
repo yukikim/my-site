@@ -2,6 +2,7 @@ import React from 'react'
 import { Noto_Sans_JP, Dela_Gothic_One, M_PLUS_1, Domine } from 'next/font/google'
 import './styles.css'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const notoSansJP = Noto_Sans_JP({
   display: 'swap',
@@ -41,12 +42,10 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
       // TailwindCSS の font-family を適用するために、各フォントの variable を className に追加
       className={`${notoSansJP.variable} ${delaGothicOne.variable} ${mPlus1.variable} ${domine.variable}`}
     >
-      <body className="font-noto-sans-jp">
+      <body className="font-m-plus-1">
         <Header />
-        <h1 className="font-dela-gothic-one text-4xl">フォントの表示テストDelaGothicOne</h1>
-        <h2 className="font-m-plus-1 text-2xl">フォントの表示テストMPlus1</h2>
-        <h3 className="font-domine text-xl">Hello Payload CMS Domine こんにちは</h3>
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
