@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: var(--font-noto-sans-jp);
+  --font-noto-sans-jp: var(--font-noto-sans-jp);
   --font-dela-gothic-one: var(--font-dela-gothic-one);
   --font-m-plus-1: var(--font-m-plus-1);
+  --font-domine: var(--font-domine);
 }
