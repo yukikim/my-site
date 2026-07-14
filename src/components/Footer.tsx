@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 type FooterLink = {
   label: string
   href: string
@@ -44,9 +46,9 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* 会社情報 */}
           <div className="sm:col-span-2">
-            <a href="/" className="text-2xl font-bold tracking-tight text-white">
+            <Link href="/" className="text-2xl font-bold tracking-tight text-white">
               My Profile
-            </a>
+            </Link>
 
             <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">
               Webサイト制作、Webアプリ開発、保守・運用を通じて、 お客様のビジネスを支援します。

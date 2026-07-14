@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 type MenuItem = {
@@ -31,13 +32,13 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* ロゴ */}
-          <a
+          <Link
             href="/"
             className="text-xl font-bold tracking-tight text-gray-400"
             onClick={closeMenu}
           >
             My Profile
-          </a>
+          </Link>
 
           {/* PC向けメニュー */}
           <nav className="hidden items-center gap-8 md:flex" aria-label="メインメニュー">
