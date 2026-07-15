@@ -11,6 +11,10 @@ export const Pages: CollectionConfig = {
     defaultColumns: ['title', 'slug', '_status', 'updatedAt'],
   },
 
+  versions: {
+    drafts: true,
+  },
+
   access: {
     read: ({ req: { user } }) => {
       if (user) {
