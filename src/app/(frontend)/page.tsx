@@ -229,7 +229,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Payload CMS のサンプルコード */}
+      {/* 一時的にページ取得テスト */}
+      <section className="bg-yellow-50 p-6">
+        <h2 className="mb-4 text-xl font-bold">Pages取得テスト</h2>
+
+        {homePage ? (
+          <pre className="overflow-auto rounded bg-slate-900 p-4 text-sm text-white">
+            {JSON.stringify(homePage, null, 2)}
+          </pre>
+        ) : (
+          <p>slugが「home」の公開済みページが見つかりません。</p>
+        )}
+      </section>
+      {/* 既存のコンテンツ */}
       <div className="home mx-auto flex flex-col items-start justify-between max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="content">
           <picture>
