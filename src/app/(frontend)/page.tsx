@@ -215,7 +215,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* <div className="home">
+      {/* Payload CMS のサンプルコード */}
+      <div className="home mx-auto flex flex-col items-start justify-between max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="content">
           <picture>
             <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/3.x/packages/ui/src/assets/payload-favicon.svg" />
@@ -264,7 +265,7 @@ export default async function HomePage() {
             <code>app/(frontend)/page.tsx</code>
           </a>
         </div>
-      </div> */}
+      </div>
     </>
   )
 }
