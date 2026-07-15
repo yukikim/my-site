@@ -17,7 +17,7 @@ export default async function HomePage() {
     overrideAccess: false,
     sort: '-createdAt',
   })
-  console.log('mediaList', mediaList)
+  // console.log('mediaList', mediaList)
 
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
