@@ -4,6 +4,7 @@ import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
 
+import { RenderBlocks } from '@/components/blocks/RenderBlocks'
 import config from '@/payload.config'
 
 export default async function HomePage() {
@@ -234,13 +235,14 @@ export default async function HomePage() {
         <h2 className="mb-4 text-xl font-bold">Pages取得テスト</h2>
 
         {homePage ? (
-          <pre className="overflow-auto rounded bg-slate-900 p-4 text-sm text-white">
-            {JSON.stringify(homePage, null, 2)}
-          </pre>
+          <RenderBlocks blocks={homePage.layout} />
         ) : (
-          <p>slugが「home」の公開済みページが見つかりません。</p>
+          <section className="mx-auto max-w-7xl px-4 py-16">
+            <p>slugが「home」の公開済みページが見つかりません。</p>
+          </section>
         )}
       </section>
+
       {/* 既存のコンテンツ */}
       <div className="home mx-auto flex flex-col items-start justify-between max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="content">
